@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RegressionSuiteEdge">
+	<test name= "RegressionTestEdge" > <!--  You can have multiple test nodes in a suite -->
+		<parameter name="browserRemote" value="edgeRemote"/>	
+			<classes>
+				<class name="com.myrbshoetests.tests.VerifyEmailFieldTest" /> <!--  You can have multiple class nodes in a test -->
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [RunParallelTests]">
+  <parameter name="browserRemote" value="firefoxRemote"/>
+  <test name="ParallelTestEdge" parallel="classes">
+    <parameter name="browserRemote" value="edgeRemote"/>
+    <classes>
+      <class name="com.myrbshoetests.tests.ShoeBlurbAvailableTest"/>
+    </classes>
+  </test> <!-- ParallelTestEdge -->
+  <test name="ParallelTestChrome" parallel="classes">
+    <parameter name="browserRemote" value="chromeRemote"/>
+    <classes>
+      <class name="com.myrbshoetests.tests.ShoeBlurbAvailableTest"/>
+    </classes>
+  </test> <!-- ParallelTestChrome -->
+  <test name="ParallelTestFireFox" parallel="classes">
+    <parameter name="browserRemote" value="firefoxRemote"/>
+    <classes>
+      <class name="com.myrbshoetests.tests.ShoeBlurbAvailableTest"/>
+    </classes>
+  </test> <!-- ParallelTestFireFox -->
+  <test name="ParallelTestEdge(failed)" parallel="classes">
+    <parameter name="browserRemote" value="edgeRemote"/>
+    <classes>
+      <class name="com.myrbshoetests.tests.ShoeBlurbAvailableTest">
+        <methods>
+          <include name="isShoeBlurbAvailable"/>
+          <include name="beforSuite"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.myrbshoetests.tests.ShoeBlurbAvailableTest -->
+    </classes>
+  </test> <!-- ParallelTestEdge(failed) -->
+  <test name="ParallelTestChrome(failed)" parallel="classes">
+    <parameter name="browserRemote" value="chromeRemote"/>
+    <classes>
+      <class name="com.myrbshoetests.tests.ShoeBlurbAvailableTest">
+        <methods>
+          <include name="isShoeBlurbAvailable"/>
+          <include name="beforSuite"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.myrbshoetests.tests.ShoeBlurbAvailableTest -->
+    </classes>
+  </test> <!-- ParallelTestChrome(failed) -->
+  <test name="ParallelTestFireFox(failed)" parallel="classes">
+    <parameter name="browserRemote" value="firefoxRemote"/>
+    <classes>
+      <class name="com.myrbshoetests.tests.ShoeBlurbAvailableTest">
+        <methods>
+          <include name="isShoeBlurbAvailable" invocation-numbers="2"/>
+          <include name="beforSuite"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.myrbshoetests.tests.ShoeBlurbAvailableTest -->
+    </classes>
+  </test> <!-- ParallelTestFireFox(failed) -->
+</suite> <!-- Failed suite [RunParallelTests] -->

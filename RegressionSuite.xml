@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="RunAll">
+	<suite-files>
+		<suite-file path="testngChrome.xml" />
+		<suite-file path="testngFireFox.xml" />
+		<suite-file path="testngEdge.xml" />		
+	</suite-files>
+</suite>

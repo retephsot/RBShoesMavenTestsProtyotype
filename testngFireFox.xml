@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RegressionSuiteFireFox">
+	<test name= "RegressionTestFireFox" > <!--  You can have multiple test nodes in a suite -->
+		<parameter name="browserRemote" value="firefoxRemote"/>	
+			<classes>
+				<class name="com.myrbshoetests.tests.ShoePictureAvailableTest" />
+				<class name="com.myrbshoetests.tests.VerifyEmailFieldTest" />			
+		</classes>
+	</test>	
+</suite>
