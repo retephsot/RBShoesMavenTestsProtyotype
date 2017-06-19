@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 1 failed,  2 skipped,  2 passed</span>
+                    <span class="method-stats">9 methods, 3 failed,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -105,26 +105,17 @@
                         <a href="#" class="method navigator-link" panel-name="suite-RunParallelTests" title="com.myrbshoetests.tests.ShoeBlurbAvailableTest" hash-for-method="isShoeBlurbAvailable(December)">isShoeBlurbAvailable(December)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RunParallelTests" title="com.myrbshoetests.tests.ShoePictureAvailableTest" hash-for-method="isShoePictureAvailable(December)">isShoePictureAvailable(December)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RunParallelTests" title="com.myrbshoetests.tests.ShoePriceAvailableTest" hash-for-method="isShoePriceAvailable(December)">isShoePriceAvailable(December)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content failed suite-RunParallelTests -->
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-RunParallelTests" class="hide-methods skipped suite-RunParallelTests"> (hide)</a> <!-- hide-methods skipped suite-RunParallelTests -->
-                      <a href="#" panel-name="suite-RunParallelTests" class="show-methods skipped suite-RunParallelTests"> (show)</a> <!-- show-methods skipped suite-RunParallelTests -->
-                    </span>
-                    <div class="method-list-content skipped suite-RunParallelTests">
-                      <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-RunParallelTests" title="com.myrbshoetests.tests.ShoeBlurbAvailableTest" hash-for-method="isShoeBlurbAvailable">isShoeBlurbAvailable</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-RunParallelTests" title="com.myrbshoetests.tests.ShoeBlurbAvailableTest" hash-for-method="isShoeBlurbAvailable">isShoeBlurbAvailable</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-RunParallelTests -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -141,6 +132,26 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-RunParallelTests" title="com.myrbshoetests.tests.ShoeBlurbAvailableTest" hash-for-method="isShoeBlurbAvailable(January)">isShoeBlurbAvailable(January)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RunParallelTests" title="com.myrbshoetests.tests.ShoePictureAvailableTest" hash-for-method="isShoePictureAvailable(October)">isShoePictureAvailable(October)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RunParallelTests" title="com.myrbshoetests.tests.ShoePictureAvailableTest" hash-for-method="isShoePictureAvailable(January)">isShoePictureAvailable(January)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RunParallelTests" title="com.myrbshoetests.tests.ShoePriceAvailableTest" hash-for-method="isShoePriceAvailable(January)">isShoePriceAvailable(January)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RunParallelTests" title="com.myrbshoetests.tests.ShoePriceAvailableTest" hash-for-method="isShoePriceAvailable(October)">isShoePriceAvailable(October)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-RunParallelTests -->
@@ -169,55 +180,64 @@
                   <span class="parameters">(December)</span>
                   <div class="stack-trace">java.lang.AssertionError: The shoe information blurb is not available. expected [true] but found [false]
 	at com.myrbshoetests.tests.ShoeBlurbAvailableTest.isShoeBlurbAvailable(ShoeBlurbAvailableTest.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-... Removed 13 stack frames
+... Removed 19 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-RunParallelTests-class-failed -->
-          <div class="suite-RunParallelTests-class-skipped">
+          <div class="suite-RunParallelTests-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">com.myrbshoetests.tests.ShoeBlurbAvailableTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.myrbshoetests.tests.ShoePictureAvailableTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="isShoeBlurbAvailable">
-                  </a> <!-- isShoeBlurbAvailable -->
-                  <span class="method-name">isShoeBlurbAvailable</span>
-                  <div class="stack-trace">java.lang.RuntimeException: java.lang.NullPointerException
+                  <a name="isShoePictureAvailable(December)">
+                  </a> <!-- isShoePictureAvailable(December) -->
+                  <span class="method-name">isShoePictureAvailable</span>
+                  <span class="parameters">(December)</span>
+                  <div class="stack-trace">java.lang.AssertionError: The shoe picture is not available. expected [true] but found [false]
+	at com.myrbshoetests.tests.ShoePictureAvailableTest.isShoePictureAvailable(ShoePictureAvailableTest.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.lang.NullPointerException
-	at com.myrbshoetests.tests.TestBase.dataProvider(TestBase.java:62)
-	... 9 more
-... Removed 13 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="isShoeBlurbAvailable">
-                  </a> <!-- isShoeBlurbAvailable -->
-                  <span class="method-name">isShoeBlurbAvailable</span>
-                  <div class="stack-trace">java.lang.RuntimeException: java.lang.NullPointerException
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.lang.NullPointerException
-	at com.myrbshoetests.tests.TestBase.dataProvider(TestBase.java:62)
-	... 9 more
-... Removed 13 stack frames
+... Removed 19 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-RunParallelTests-class-skipped -->
+          </div> <!-- suite-RunParallelTests-class-failed -->
+          <div class="suite-RunParallelTests-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.myrbshoetests.tests.ShoePriceAvailableTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="isShoePriceAvailable(December)">
+                  </a> <!-- isShoePriceAvailable(December) -->
+                  <span class="method-name">isShoePriceAvailable</span>
+                  <span class="parameters">(December)</span>
+                  <div class="stack-trace">java.lang.AssertionError: The shoe price is not available. expected [true] but found [false]
+	at com.myrbshoetests.tests.ShoePriceAvailableTest.isShoePriceAvailable(ShoePriceAvailableTest.java:18)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 19 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-RunParallelTests-class-failed -->
           <div class="suite-RunParallelTests-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -242,6 +262,54 @@ Caused by: java.lang.NullPointerException
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-RunParallelTests-class-passed -->
+          <div class="suite-RunParallelTests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.myrbshoetests.tests.ShoePictureAvailableTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="isShoePictureAvailable(October)">
+                  </a> <!-- isShoePictureAvailable(October) -->
+                  <span class="method-name">isShoePictureAvailable</span>
+                  <span class="parameters">(October)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="isShoePictureAvailable(January)">
+                  </a> <!-- isShoePictureAvailable(January) -->
+                  <span class="method-name">isShoePictureAvailable</span>
+                  <span class="parameters">(January)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-RunParallelTests-class-passed -->
+          <div class="suite-RunParallelTests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.myrbshoetests.tests.ShoePriceAvailableTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="isShoePriceAvailable(January)">
+                  </a> <!-- isShoePriceAvailable(January) -->
+                  <span class="method-name">isShoePriceAvailable</span>
+                  <span class="parameters">(January)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="isShoePriceAvailable(October)">
+                  </a> <!-- isShoePriceAvailable(October) -->
+                  <span class="method-name">isShoePriceAvailable</span>
+                  <span class="parameters">(October)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-RunParallelTests-class-passed -->
         </div> <!-- panel RunParallelTests -->
         <div panel-name="test-xml-RunParallelTests" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -251,52 +319,76 @@ Caused by: java.lang.NullPointerException
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;RunParallelTests&quot;&gt;
-  &lt;test name=&quot;ParallelTestEdge&quot; parallel=&quot;classes&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;RunParallelTests&quot; parallel=&quot;tests&quot;&gt;
+  &lt;test name=&quot;ParallelTestEdge&quot;&gt;
     &lt;parameter name=&quot;browserRemote&quot; value=&quot;edgeRemote&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.myrbshoetests.tests.ShoeBlurbAvailableTest&quot;/&gt;
+      &lt;class name=&quot;com.myrbshoetests.tests.ShoePriceAvailableTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ParallelTestEdge --&gt;
-  &lt;test name=&quot;ParallelTestChrome&quot; parallel=&quot;classes&quot;&gt;
+  &lt;test name=&quot;ParallelTestChrome&quot;&gt;
     &lt;parameter name=&quot;browserRemote&quot; value=&quot;chromeRemote&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.myrbshoetests.tests.ShoeBlurbAvailableTest&quot;/&gt;
+      &lt;class name=&quot;com.myrbshoetests.tests.ShoePictureAvailableTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ParallelTestChrome --&gt;
-  &lt;test name=&quot;ParallelTestFireFox&quot; parallel=&quot;classes&quot;&gt;
+  &lt;test name=&quot;ParallelTestFireFox&quot;&gt;
     &lt;parameter name=&quot;browserRemote&quot; value=&quot;firefoxRemote&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.myrbshoetests.tests.ShoeBlurbAvailableTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ParallelTestFireFox --&gt;
-  &lt;test name=&quot;ParallelTestEdge(failed)&quot; parallel=&quot;classes&quot;&gt;
+  &lt;test name=&quot;ParallelTestEdge(failed)&quot; parallel=&quot;tests&quot;&gt;
     &lt;parameter name=&quot;browserRemote&quot; value=&quot;edgeRemote&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.myrbshoetests.tests.ShoeBlurbAvailableTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;isShoeBlurbAvailable&quot;/&gt;
           &lt;include name=&quot;beforSuite&quot;/&gt;
           &lt;include name=&quot;afterMethod&quot;/&gt;
           &lt;include name=&quot;beforeMethod&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.myrbshoetests.tests.ShoeBlurbAvailableTest --&gt;
+      &lt;class name=&quot;com.myrbshoetests.tests.ShoePictureAvailableTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;afterMethod&quot;/&gt;
+          &lt;include name=&quot;beforeMethod&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.myrbshoetests.tests.ShoePictureAvailableTest --&gt;
+      &lt;class name=&quot;com.myrbshoetests.tests.ShoePriceAvailableTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;afterMethod&quot;/&gt;
+          &lt;include name=&quot;beforeMethod&quot;/&gt;
+          &lt;include name=&quot;isShoePriceAvailable&quot; invocation-numbers=&quot;2&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.myrbshoetests.tests.ShoePriceAvailableTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ParallelTestEdge(failed) --&gt;
-  &lt;test name=&quot;ParallelTestChrome(failed)&quot; parallel=&quot;classes&quot;&gt;
+  &lt;test name=&quot;ParallelTestChrome(failed)&quot; parallel=&quot;tests&quot;&gt;
     &lt;parameter name=&quot;browserRemote&quot; value=&quot;chromeRemote&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.myrbshoetests.tests.ShoeBlurbAvailableTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;isShoeBlurbAvailable&quot;/&gt;
           &lt;include name=&quot;beforSuite&quot;/&gt;
           &lt;include name=&quot;afterMethod&quot;/&gt;
           &lt;include name=&quot;beforeMethod&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.myrbshoetests.tests.ShoeBlurbAvailableTest --&gt;
+      &lt;class name=&quot;com.myrbshoetests.tests.ShoePictureAvailableTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;isShoePictureAvailable&quot; invocation-numbers=&quot;2&quot;/&gt;
+          &lt;include name=&quot;afterMethod&quot;/&gt;
+          &lt;include name=&quot;beforeMethod&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.myrbshoetests.tests.ShoePictureAvailableTest --&gt;
+      &lt;class name=&quot;com.myrbshoetests.tests.ShoePriceAvailableTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;afterMethod&quot;/&gt;
+          &lt;include name=&quot;beforeMethod&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.myrbshoetests.tests.ShoePriceAvailableTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ParallelTestChrome(failed) --&gt;
-  &lt;test name=&quot;ParallelTestFireFox(failed)&quot; parallel=&quot;classes&quot;&gt;
+  &lt;test name=&quot;ParallelTestFireFox(failed)&quot; parallel=&quot;tests&quot;&gt;
     &lt;parameter name=&quot;browserRemote&quot; value=&quot;firefoxRemote&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.myrbshoetests.tests.ShoeBlurbAvailableTest&quot;&gt;
@@ -307,6 +399,18 @@ Caused by: java.lang.NullPointerException
           &lt;include name=&quot;beforeMethod&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.myrbshoetests.tests.ShoeBlurbAvailableTest --&gt;
+      &lt;class name=&quot;com.myrbshoetests.tests.ShoePictureAvailableTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;afterMethod&quot;/&gt;
+          &lt;include name=&quot;beforeMethod&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.myrbshoetests.tests.ShoePictureAvailableTest --&gt;
+      &lt;class name=&quot;com.myrbshoetests.tests.ShoePriceAvailableTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;afterMethod&quot;/&gt;
+          &lt;include name=&quot;beforeMethod&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.myrbshoetests.tests.ShoePriceAvailableTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ParallelTestFireFox(failed) --&gt;
 &lt;/suite&gt; &lt;!-- RunParallelTests --&gt;
@@ -329,13 +433,13 @@ Caused by: java.lang.NullPointerException
                 <span class="test-name">ParallelTestFireFox (1 class)</span>
               </li>
               <li>
-                <span class="test-name">ParallelTestEdge(failed) (1 class)</span>
+                <span class="test-name">ParallelTestEdge(failed) (3 classes)</span>
               </li>
               <li>
-                <span class="test-name">ParallelTestChrome(failed) (1 class)</span>
+                <span class="test-name">ParallelTestChrome(failed) (3 classes)</span>
               </li>
               <li>
-                <span class="test-name">ParallelTestFireFox(failed) (1 class)</span>
+                <span class="test-name">ParallelTestFireFox(failed) (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -361,32 +465,48 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(9);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'isShoeBlurbAvailable')
-data.setCell(0, 2, 'com.myrbshoetests.tests.ShoeBlurbAvailableTest')
-data.setCell(0, 3, 15475);
+data.setCell(0, 1, 'isShoePriceAvailable')
+data.setCell(0, 2, 'com.myrbshoetests.tests.ShoePriceAvailableTest')
+data.setCell(0, 3, 15856);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'isShoeBlurbAvailable')
-data.setCell(1, 2, 'com.myrbshoetests.tests.ShoeBlurbAvailableTest')
-data.setCell(1, 3, 3576);
+data.setCell(1, 1, 'isShoePictureAvailable')
+data.setCell(1, 2, 'com.myrbshoetests.tests.ShoePictureAvailableTest')
+data.setCell(1, 3, 15698);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'isShoeBlurbAvailable')
 data.setCell(2, 2, 'com.myrbshoetests.tests.ShoeBlurbAvailableTest')
-data.setCell(2, 3, 1853);
+data.setCell(2, 3, 15517);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'isShoeBlurbAvailable')
-data.setCell(3, 2, 'com.myrbshoetests.tests.ShoeBlurbAvailableTest')
-data.setCell(3, 3, 0);
+data.setCell(3, 1, 'isShoePictureAvailable')
+data.setCell(3, 2, 'com.myrbshoetests.tests.ShoePictureAvailableTest')
+data.setCell(3, 3, 5215);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'isShoeBlurbAvailable')
 data.setCell(4, 2, 'com.myrbshoetests.tests.ShoeBlurbAvailableTest')
-data.setCell(4, 3, 0);
+data.setCell(4, 3, 4194);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'isShoePriceAvailable')
+data.setCell(5, 2, 'com.myrbshoetests.tests.ShoePriceAvailableTest')
+data.setCell(5, 3, 3365);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'isShoePictureAvailable')
+data.setCell(6, 2, 'com.myrbshoetests.tests.ShoePictureAvailableTest')
+data.setCell(6, 3, 2733);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'isShoeBlurbAvailable')
+data.setCell(7, 2, 'com.myrbshoetests.tests.ShoeBlurbAvailableTest')
+data.setCell(7, 3, 2095);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'isShoePriceAvailable')
+data.setCell(8, 2, 'com.myrbshoetests.tests.ShoePriceAvailableTest')
+data.setCell(8, 3, 1967);
 window.suiteTableData['RunParallelTests']= { tableData: data, tableDiv: 'times-div-RunParallelTests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 20 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-RunParallelTests">
               </div> <!-- times-div-RunParallelTests -->
             </div> <!-- times-div -->
@@ -419,41 +539,183 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(firefoxRemote)</span>
-                <span class="method-start">370 ms</span>
+                <span class="method-start">312 ms</span>
               </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoePictureAvailableTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(chromeRemote)</span>
+                <span class="method-start">312 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoePriceAvailableTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(edgeRemote)</span>
+                <span class="method-start">312 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">isShoePriceAvailable(January)</span>
+                <span class="method-start">3583 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoePictureAvailableTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">isShoePictureAvailable(January)</span>
+                <span class="method-start">5446 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoePriceAvailableTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">6950 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoeBlurbAvailableTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">isShoeBlurbAvailable(January)</span>
-                <span class="method-start">6162 ms</span>
+                <span class="method-start">7384 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoePriceAvailableTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(edgeRemote)</span>
+                <span class="method-start">10110 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoePictureAvailableTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">9740 ms</span>
+                <span class="method-start">10663 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(firefoxRemote)</span>
-                <span class="method-start">11243 ms</span>
+                <span class="method-name">beforeMethod(chromeRemote)</span>
+                <span class="method-start">11566 ms</span>
               </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoeBlurbAvailableTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">11580 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoePriceAvailableTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">isShoePriceAvailable(October)</span>
+                <span class="method-start">12049 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoeBlurbAvailableTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(firefoxRemote)</span>
+                <span class="method-start">12935 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoePriceAvailableTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">14018 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoePictureAvailableTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">isShoePictureAvailable(October)</span>
+                <span class="method-start">16047 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoePriceAvailableTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(edgeRemote)</span>
+                <span class="method-start">17297 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoeBlurbAvailableTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">isShoeBlurbAvailable(November)</span>
-                <span class="method-start">16141 ms</span>
+                <span class="method-start">18591 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoePictureAvailableTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">17996 ms</span>
+                <span class="method-start">18782 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(chromeRemote)</span>
+                <span class="method-start">19703 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoePriceAvailableTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">isShoePriceAvailable(December)</span>
+                <span class="method-start">19897 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoeBlurbAvailableTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">20687 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(firefoxRemote)</span>
-                <span class="method-start">19311 ms</span>
+                <span class="method-start">22140 ms</span>
               </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoePictureAvailableTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">isShoePictureAvailable(December)</span>
+                <span class="method-start">23784 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoeBlurbAvailableTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">isShoeBlurbAvailable(December)</span>
-                <span class="method-start">24151 ms</span>
+                <span class="method-start">27170 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoePriceAvailableTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">39628 ms</span>
+                <span class="method-start">35756 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoePictureAvailableTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">39483 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.myrbshoetests.tests.ShoeBlurbAvailableTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">42689 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="RunParallelTests">
-  <test name="ParallelTestEdge" parallel="classes">
+<suite name="RunParallelTests" parallel = "tests">
+  <test name="ParallelTestEdge">
   	<parameter name="browserRemote" value="edgeRemote"/>
     	<classes>
-      		<class name="com.myrbshoetests.tests.ShoeBlurbAvailableTest"/>
+      		<class name="com.myrbshoetests.tests.ShoePriceAvailableTest"/>
     	</classes>
   	</test> <!-- ParallelTests -->
   	
-  	<test name="ParallelTestChrome" parallel="classes">
+  	<test name="ParallelTestChrome">
   	<parameter name="browserRemote" value="chromeRemote"/>
     	<classes>
-      		<class name="com.myrbshoetests.tests.ShoeBlurbAvailableTest"/>
+      		<class name="com.myrbshoetests.tests.ShoePictureAvailableTest"/>
     	</classes>
   	</test> <!-- ParallelTests -->
   	
-  	<test name="ParallelTestFireFox" parallel="classes">
+  	<test name="ParallelTestFireFox">
   	<parameter name="browserRemote" value="firefoxRemote"/>
     	<classes>
       		<class name="com.myrbshoetests.tests.ShoeBlurbAvailableTest"/>
