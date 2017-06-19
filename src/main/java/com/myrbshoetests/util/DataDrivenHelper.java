@@ -1,5 +1,7 @@
 package com.myrbshoetests.util;
 
+import java.io.FileInputStream;
+
 public class DataDrivenHelper extends ExcelHelper 
 {
 
@@ -35,5 +37,12 @@ public class DataDrivenHelper extends ExcelHelper
 		}
 		
 		return testCaseDataSets;	
-	}	
+	}
+	
+	public void closeInputStream(FileInputStream fis) {
+		
+		closeInputStream(fis);
+		
+	}
+	
 }

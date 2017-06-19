@@ -28,7 +28,7 @@ public class TestBase {
 
 	protected WebDriver driver;
 	protected HomePage homepage;
-	protected Properties testConfig;
+	protected static Properties testConfig;
 	public String baseUrl;
 
 	@BeforeSuite()
@@ -62,13 +62,17 @@ public class TestBase {
 		DataDrivenHelper ddh = new DataDrivenHelper(testConfig.getProperty("mastertestdatafile"));
 		Object[][] testData = ddh.getTestCaseDataSets(testConfig.getProperty("testdatasheet"), method.getName());
 
+
+		
 		return testData;
 	}
 
 	@AfterMethod
 	public void afterMethod() {
-
+		
 		WebDriverHelper.quitDriver(driver);
+		
+		
 	}
 
 }
