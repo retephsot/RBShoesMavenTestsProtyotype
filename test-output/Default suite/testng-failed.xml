@@ -3,12 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.myrbshoeresttests.tests.Test_REST_BasicFeatures">
+      <class name="com.myrbshoeresttests.tests.RestTest_5ResponseInDiffWays">
         <methods>
-          <include name="configuration"/>
-          <include name="testWithRoot"/>
+          <include name="postJSONBody"/>
         </methods>
-      </class> <!-- com.myrbshoeresttests.tests.Test_REST_BasicFeatures -->
+      </class> <!-- com.myrbshoeresttests.tests.RestTest_5ResponseInDiffWays -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,5 +1,8 @@
 package com.myrbshoetests.tests;
 
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.is;
+
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -7,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class RTest extends TestBase{
 	
-	@Test (dataProvider = "dataProvider")
+	@Test (priority =1, dataProvider = "dataProvider")
 	public void isEmailSubmissionSuccessful(String month, String email, String message) throws InterruptedException, 
 	IOException 
 	
@@ -18,7 +21,7 @@ public class RTest extends TestBase{
 		Assert.assertTrue(testResults, "The email has not been successfully submitted.");		  						 			  						 	  						 	  						 
   }
 	
-	@Test (dataProvider = "dataProvider")
+	@Test (priority =2, dataProvider = "dataProvider")
 	public void isHomeEmailSubmissionSuccessful(String email, String message) throws InterruptedException, 
 	IOException 
 	
@@ -28,61 +31,21 @@ public class RTest extends TestBase{
 		Assert.assertTrue(testResults, "The email has not been successfully submitted.");		  						 			  						 	  						 	  						 
   }
 	
-	@Test (dataProvider = "dataProvider")
-	public void verifySubmitEmailField(String month) throws InterruptedException, 
-	IOException 
-	
-  {		    
 
-		boolean testResults = homepage.clickMonthLink(month)
-			      					  .isEmailSubmitFieldAvailable();
-		
-		Assert.assertTrue(testResults, "The reminder email field is not available.");	
-		  						 			  						 	  						 	  						 
-  }
 	
-	@Test
-	public void verifyHomeSubmitEmailField() throws InterruptedException, 
-	IOException 
+	@Test (priority =3)
+	public void testWithRoot() {
+		 given().
+		  when().
+		      get("https://api-staging.mapanything.io/live/lastposition?deviceid=calamp-4642102691").
+		then().
+		statusCode(200).
+			  log().all().
+			  root("positions[0]").
+		 	  body("deviceMessage.deviceId", is(9082)).
+		 	  body("vendor", is("calamp")).
+		 	  body("messageType", is("CalAmp-AVL"));
+	}
 	
-  {		    
 
-		boolean testResults = homepage.isEmailSubmitFieldAvailable();
-		
-		Assert.assertTrue(testResults, "The reminder email field is not available.");	
-		  						 			  						 	  						 	  						 
-  }
-	
-	@Test (dataProvider = "dataProvider")
-	public void isShoeBlurbAvailable(String month) throws InterruptedException, 
-	IOException
-	
-  {		    
-		boolean testResults = homepage.clickMonthLink(month)
-								      .isShoeBlurbAvailable();
-		
-		Assert.assertTrue(testResults, "The shoe information blurb is not available.");		  						 			  						 	  						 	  						 
-  }
-	
-	@Test (dataProvider = "dataProvider")
-	public void isShoePriceAvailable(String month) throws InterruptedException, 
-	IOException
-	
-  {		    
-		boolean testResults = homepage.clickMonthLink(month)
-								      .isShoePriceAvailable();
-		
-		Assert.assertTrue(testResults, "The shoe price is not available.");		  						 			  						 	  						 	  						 
-  }
-	
-	@Test (dataProvider = "dataProvider")
-	public void isShoePictureAvailable(String month) throws InterruptedException, 
-	IOException
-	
-  {		    
-		boolean testResults = homepage.clickMonthLink(month)
-								      .isShoePictureAvailable();
-		
-		Assert.assertTrue(testResults, "The shoe picture is not available.");		  						 			  						 	  						 	  						 
-  }
 }

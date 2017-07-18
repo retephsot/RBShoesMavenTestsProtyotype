@@ -20,14 +20,16 @@ public class Test_REST_BasicFeatures extends RestAssuredConfig{
 		.log().all();
 	}
 	
-	//@Test
+//	@Test
 	public void testParameterAndHeaders() {
 			   given().
-		 param("deviceid", "calamp-4642102691").
+			   param("per_page", "50").
+			   param("date", "2000:2016").
+			   param("format", "json").
 		
-		 header("Authorization","MapAnythingTestKey").
+		// header("Authorization","TestKey").
 		 		when().
-		 	   get("https://api-staging.mapanything.io/live/lastposition").
+		 	   get("https://api.worldbank.org/countries/IND/indicators/NY.GDP.PCAP.PP.CD").
 		 	    then().
 	   statusCode(200).
 	             log().all();
@@ -35,7 +37,7 @@ public class Test_REST_BasicFeatures extends RestAssuredConfig{
 	
 	//@Test
 	public void validateGET() {
-		given().get("https://api-staging.mapanything.io/live/lastposition?deviceid=calamp-4642102691").then().statusCode(200)
+		given().get("https://api.worldbank.org/countries/IND/indicators/NY.GDP.PCAP.PP.CD?per_page=50&date=2000:2016&format=json").then().statusCode(200)
 		.log().all();
 		
 	}
@@ -50,39 +52,43 @@ public class Test_REST_BasicFeatures extends RestAssuredConfig{
 		public void testParamAndHeaders() {
 				   given().
 			 		when().
-			 	   get("https://api-staging.mapanything.io/live/lastposition?deviceid=calamp-4642102691").
+			 	   get("https://api.worldbank.org/countries/IND/indicators/NY.GDP.PCAP.PP.CD?per_page=50&date=2000:2016&format=json").
 			 	    then().
 		   statusCode(200).
 		             log().all()		             	  
-		             	  .body("positions[0].success", equalTo(true))
-		             	  .body("positions[0].deviceId", equalTo("4642102691"));
+		             	  .body("[0].total", equalTo(17))
+		             	  .body("[1][0].indicator.id", equalTo("NY.GDP.PCAP.PP.CD"));
 		}
 		
-	//@Test
+//	@Test
 	public void testWithOutRoot() {
 		 given().
 		  when().
-		      get("https://api-staging.mapanything.io/live/lastposition?deviceid=calamp-4642102691").
+		      get("https://api.worldbank.org/countries/IND/indicators/NY.GDP.PCAP.PP.CD?per_page=50&date=2000:2016&format=json").
 		then().
 		statusCode(200).
 			  log().all().
-		 	  body("positions[0].deviceMessage.deviceId", is(9082)).
-		 	  body("positions[0].vendor", is("calamp")).
-		 	  body("positions[0].messageType", is("CalAmp-AVL"));
+		 	  body("[0].total", is(17)).
+		 	  body("[1][0].indicator.id", is("NY.GDP.PCAP.PP.CD")).
+		 	  body("[1][16].decimal", is("1"));
 	}
 	
 	@Test
 	public void testWithRoot() {
 		 given().
+		 param("per_page", "50").
+		 param("date", "2000:2016").
+		 param("format", "json").
 		  when().
-		      get("https://api-staging.mapanything.io/live/lastposition?deviceid=calamp-4642102691").
+		      get("https://api.worldbank.org/countries/IND/indicators/NY.GDP.PCAP.PP.CD").
 		then().
 		statusCode(200).
 			  log().all().
-			  root("positions[0]").
-		 	  body("deviceMessage.deviceId", is(9082)).
-		 	  body("vendor", is("calamp")).
-		 	  body("messageType", is("CalAmp-AVL"));
+			  root("[0]").
+		 	  body("per_page", is("50")).
+		 	  body("total", is(17)).
+		 	  detachRoot("[0]").
+		 	  body("[1][16].decimal", is("1"));
 	}
 	
 }

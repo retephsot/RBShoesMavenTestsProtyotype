@@ -1,57 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [RunParallelTests]" parallel="tests">
-  <parameter name="browserRemote" value="firefoxRemote"/>
-  <test name="ParallelTestEdge">
-    <parameter name="browserRemote" value="edgeRemote"/>
-    <classes>
-      <class name="com.myrbshoetests.tests.ShoePriceAvailableTest"/>
-    </classes>
-  </test> <!-- ParallelTestEdge -->
-  <test name="ParallelTestChrome">
-    <parameter name="browserRemote" value="chromeRemote"/>
-    <classes>
-      <class name="com.myrbshoetests.tests.ShoePictureAvailableTest"/>
-      <class name="com.myrbshoetests.tests.AcceptanceCriteria2Test"/>
-    </classes>
-  </test> <!-- ParallelTestChrome -->
-  <test name="ParallelTestFireFox">
-    <parameter name="browserRemote" value="firefoxRemote"/>
-    <classes>
-      <class name="com.myrbshoetests.tests.ShoeBlurbAvailableTest"/>
-    </classes>
-  </test> <!-- ParallelTestFireFox -->
-  <test name="ParallelTestEdge(failed)" parallel="tests">
-    <parameter name="browserRemote" value="edgeRemote"/>
-    <classes>
-      <class name="com.myrbshoetests.tests.AcceptanceCriteria2Test">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-        </methods>
-      </class> <!-- com.myrbshoetests.tests.AcceptanceCriteria2Test -->
-      <class name="com.myrbshoetests.tests.ShoePictureAvailableTest">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-        </methods>
-      </class> <!-- com.myrbshoetests.tests.ShoePictureAvailableTest -->
-      <class name="com.myrbshoetests.tests.ShoePriceAvailableTest">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="isShoePriceAvailable" invocation-numbers="2"/>
-        </methods>
-      </class> <!-- com.myrbshoetests.tests.ShoePriceAvailableTest -->
-      <class name="com.myrbshoetests.tests.ShoeBlurbAvailableTest">
-        <methods>
-          <include name="beforSuite"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-        </methods>
-      </class> <!-- com.myrbshoetests.tests.ShoeBlurbAvailableTest -->
-    </classes>
-  </test> <!-- ParallelTestEdge(failed) -->
+  <parameter name="browserRemote" value="chromeRemote"/>
   <test name="ParallelTestFireFox(failed)" parallel="tests">
     <parameter name="browserRemote" value="firefoxRemote"/>
     <classes>
@@ -67,12 +17,6 @@
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- com.myrbshoetests.tests.ShoePictureAvailableTest -->
-      <class name="com.myrbshoetests.tests.ShoePriceAvailableTest">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-        </methods>
-      </class> <!-- com.myrbshoetests.tests.ShoePriceAvailableTest -->
       <class name="com.myrbshoetests.tests.ShoeBlurbAvailableTest">
         <methods>
           <include name="isShoeBlurbAvailable" invocation-numbers="2"/>
@@ -81,6 +25,17 @@
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- com.myrbshoetests.tests.ShoeBlurbAvailableTest -->
+      <class name="com.myrbshoetests.tests.ShoePriceAvailableTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.myrbshoetests.tests.ShoePriceAvailableTest -->
+      <class name="com.myrbshoeresttests.tests.Test_REST_BasicFeatures">
+        <methods>
+          <include name="configuration"/>
+        </methods>
+      </class> <!-- com.myrbshoeresttests.tests.Test_REST_BasicFeatures -->
     </classes>
   </test> <!-- ParallelTestFireFox(failed) -->
   <test name="ParallelTestChrome(failed)" parallel="tests">
@@ -99,12 +54,6 @@
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- com.myrbshoetests.tests.ShoePictureAvailableTest -->
-      <class name="com.myrbshoetests.tests.ShoePriceAvailableTest">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-        </methods>
-      </class> <!-- com.myrbshoetests.tests.ShoePriceAvailableTest -->
       <class name="com.myrbshoetests.tests.ShoeBlurbAvailableTest">
         <methods>
           <include name="beforSuite"/>
@@ -112,6 +61,17 @@
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- com.myrbshoetests.tests.ShoeBlurbAvailableTest -->
+      <class name="com.myrbshoetests.tests.ShoePriceAvailableTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.myrbshoetests.tests.ShoePriceAvailableTest -->
+      <class name="com.myrbshoeresttests.tests.Test_REST_BasicFeatures">
+        <methods>
+          <include name="configuration"/>
+        </methods>
+      </class> <!-- com.myrbshoeresttests.tests.Test_REST_BasicFeatures -->
     </classes>
   </test> <!-- ParallelTestChrome(failed) -->
 </suite> <!-- Failed suite [RunParallelTests] -->

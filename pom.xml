@@ -164,16 +164,7 @@
 			<version>2.41.1</version>
 		</dependency>
 		
-		<dependency>
-			<groupId>org.jboss.resteasy</groupId>
-			<artifactId>resteasy-jaxrs</artifactId>
-			<version>2.2.1.GA</version>
-		</dependency>
-		<dependency>
-			<groupId>org.jboss.resteasy</groupId>
-			<artifactId>resteasy-jackson-provider</artifactId>
-			<version>2.2.1.GA</version>
-		</dependency>
+
 		
 		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
 		<dependency>
@@ -210,6 +201,7 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>		
+		
 		
 	</dependencies>
 </project>

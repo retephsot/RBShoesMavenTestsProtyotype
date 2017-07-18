@@ -1,0 +1,14 @@
+{
+"uIds":["131210243164"],
+"tableNames":["dmp20160831.x_13121"],
+"sfdcData":[],
+"topicData":[
+{"topic_id":"statename","field":"FirstName"},
+{"topic_id":"countyname","field":"LastName"},
+{"topic_id":"site_city","field":"City"},
+{"topic_id":"site_state","field":"State"},
+{"topic_id":"site_zip","field":"PostalCode"}
+],
+"dataType":"dmp-v1"
+
+}
