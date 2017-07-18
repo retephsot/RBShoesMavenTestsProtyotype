@@ -7,14 +7,16 @@ import org.testng.annotations.Test;
 
 public class ShoeBlurbAvailableTest extends TestBase{
 	
-	@Test (dataProvider = "dataProvider")
-	public void isShoeBlurbAvailable(String month) throws InterruptedException, 
-	IOException
-	
-  {		    
-		boolean testResults = homepage.clickMonthLink(month)
-								      .isShoeBlurbAvailable();
+		@Test (dataProvider = "dataProvider")
+		public void isShoeBlurbAvailable(String month) throws InterruptedException, 
+		IOException
 		
-		Assert.assertTrue(testResults, "The shoe information blurb is not available.");		  						 			  						 	  						 	  						 
-  }
+	  {		    
+			boolean testResults = homepage.clickMonthLink(month)
+									      .isShoeBlurbAvailable();
+			
+			Assert.assertTrue(testResults, "The shoe information blurb is not available.");		  						 			  						 	  						 	  						 
+	  }
+		
+		
 }

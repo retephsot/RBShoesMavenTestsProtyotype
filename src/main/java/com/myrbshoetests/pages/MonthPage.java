@@ -49,7 +49,7 @@ public class MonthPage extends PageBase{
 		shoecount = getShoeListCount();
 		
 		if (shoecount == 0) {
-			System.out.println("There are not shoes available, the test has failed.");
+			System.out.println("There are no shoes available, the test has failed.");
 			
 			return testresults;
 		}
@@ -82,7 +82,7 @@ public class MonthPage extends PageBase{
 		shoecount = getShoeListCount();
 		
 		if (shoecount == 0) {
-			System.out.println("There are not shoes available, the test has failed.");
+			System.out.println("There are no shoes available, the test has failed.");
 			
 			return testresults;
 		}
@@ -116,7 +116,7 @@ public class MonthPage extends PageBase{
 		shoecount = getShoeListCount();
 		
 		if (shoecount == 0) {
-			System.out.println("There are not shoes available, the test has failed.");
+			System.out.println("There are no shoes available, the test has failed.");
 			
 			return testresults;
 		}
