@@ -58,6 +58,13 @@ public class PageBase
 			
 	}
 	
+	//get shoe count
+	public int getShoeListCount()
+	{
+		return driver.findElements(By.xpath("//ul[@id='shoe_list']/li")).size();	
+	}
+	
+	//waits
 	
 	public void waitForElementByCssSel(String elementCSS) {
 		WebDriverWait wait = new WebDriverWait(driver, 15);

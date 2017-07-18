@@ -12,6 +12,7 @@
   	<parameter name="browserRemote" value="chromeRemote"/>
     	<classes>
       		<class name="com.myrbshoetests.tests.ShoePictureAvailableTest"/>
+      		<class name="com.myrbshoetests.tests.AcceptanceCriteria2Test"/>
     	</classes>
   	</test> <!-- ParallelTests -->
   	

@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="APITestSuite">
+	<test name= "APITest" > <!--  You can have multiple test nodes in a suite -->
+		<groups>
+			<run>
+				<include name = "demo"/>
+			</run>	
+		</groups>
+		<packages>
+
+			<package name="com.myrbshoesresttests.tests"/>
+		</packages>
+	</test>	
+</suite>

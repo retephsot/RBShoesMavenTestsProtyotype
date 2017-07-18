@@ -35,6 +35,7 @@ public class WebDriverHelper
 				if(parallel.equalsIgnoreCase("parallelTests")) {
 					
 					if(browserRemote.equalsIgnoreCase("chromeRemote")) {
+						
 					/*	System.out.println("Opening Chrome Driver");					
 						DesiredCapabilities capability = DesiredCapabilities.chrome();
 						capability.setBrowserName("chrome");
@@ -46,7 +47,7 @@ public class WebDriverHelper
 			            ChromeOptions options = new ChromeOptions();
 			            capabilities.setCapability("chrome.binary",windowsChromeDriver);  
 			            capabilities.setCapability(ChromeOptions.CAPABILITY, options); 
-			            driver = new ChromeDriver(capabilities);  
+			            driver = new ChromeDriver(capabilities);
 						
 					}
 					else if(browserRemote.equalsIgnoreCase("firefoxRemote")) {
@@ -299,8 +300,8 @@ public class WebDriverHelper
 			
 			}	
 			
-			//Set implicityWait time to 15 seconds
-			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+			//Set implicityWait time to 5 seconds
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			//Set to full screen
 			driver.manage().window().maximize();
 			return driver;
