@@ -22,5 +22,10 @@
       		<class name="com.myrbshoetests.tests.ShoeBlurbAvailableTest"/>
     	</classes>
   	</test> <!-- ParallelTests -->
-  	
+  	<test name="RestTest">
+
+    	<classes>
+      		<class name="com.myrbshoeresttests.tests.Test_REST_BasicFeatures"/>
+    	</classes>
+  	</test>
 </suite> <!-- RunParallelTests -->

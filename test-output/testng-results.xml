@@ -2,20 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3375" started-at="2017-07-17T21:11:03Z" finished-at="2017-07-17T21:11:07Z">
+  <suite name="Default suite" duration-ms="35306" started-at="2017-07-18T03:20:33Z" finished-at="2017-07-18T03:21:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3375" started-at="2017-07-17T21:11:03Z" finished-at="2017-07-17T21:11:07Z">
-      <class name="com.myrbshoeresttests.tests.Test_REST_BasicFeatures">
-        <test-method status="PASS" signature="configuration()[pri:0, instance:com.myrbshoeresttests.tests.Test_REST_BasicFeatures@3327bd23]" name="configuration" is-config="true" duration-ms="500" started-at="2017-07-17T17:11:03Z" finished-at="2017-07-17T17:11:03Z">
+    <test name="Default test" duration-ms="35306" started-at="2017-07-18T03:20:33Z" finished-at="2017-07-18T03:21:08Z">
+      <class name="com.myrbshoeresttests.tests.RestTest_5ResponseInDiffWays">
+        <test-method status="PASS" signature="postJSONBody()[pri:0, instance:com.myrbshoeresttests.tests.RestTest_5ResponseInDiffWays@3159c4b8]" name="postJSONBody" duration-ms="35274" started-at="2017-07-17T23:20:33Z" finished-at="2017-07-17T23:21:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- configuration -->
-        <test-method status="PASS" signature="testWithRoot()[pri:0, instance:com.myrbshoeresttests.tests.Test_REST_BasicFeatures@3327bd23]" name="testWithRoot" duration-ms="3352" started-at="2017-07-17T17:11:03Z" finished-at="2017-07-17T17:11:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testWithRoot -->
-      </class> <!-- com.myrbshoeresttests.tests.Test_REST_BasicFeatures -->
+        </test-method> <!-- postJSONBody -->
+      </class> <!-- com.myrbshoeresttests.tests.RestTest_5ResponseInDiffWays -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
